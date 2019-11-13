@@ -36,8 +36,6 @@
 	<properties>
 		<outputDirectory>${project.build.directory}/docker2</outputDirectory>
 		<divaindexmessenger.version>1.0-SNAPSHOT</divaindexmessenger.version>
-		<coralog4j.version>2.0.0</coralog4j.version>
-		<activemq.version>1.0-SNAPSHOT</activemq.version>
 	</properties>
 
 	<scm>
@@ -53,19 +51,6 @@
 			<version>${divaindexmessenger.version}</version>
 			<scope>runtime</scope>
 		</dependency>
-				<dependency>
-			<groupId>se.uu.ub.cora</groupId>
-			<artifactId>log4j</artifactId>
-			<version>${coralog4j.version}</version>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>se.uu.ub.cora</groupId>
-			<artifactId>activemq</artifactId>
-			<version>${activemq.version}</version>
-			<scope>compile</scope>
-		</dependency>
-		
 	</dependencies>
 
 	<build>
@@ -119,6 +104,7 @@
 				<configuration>
 					<contextDirectory>${outputDirectory}</contextDirectory>
 					<repository>diva-index</repository>
+					<tag>${project.version}</tag>
 				</configuration>
 			</plugin>
 		</plugins>
