@@ -1,4 +1,4 @@
-FROM  openjdk:13
+FROM  openjdk:14
 
 COPY /divaindexmessenger*.jar /indexing/divaindexmessenger.jar
 #COPY /activemq.jar /indexing/activemq.jar
