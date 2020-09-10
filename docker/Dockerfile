@@ -1,4 +1,5 @@
-FROM  openjdk:14
+ARG CORA_DOCKER_JAVA_VERSION
+FROM cora-docker-java:${CORA_DOCKER_JAVA_VERSION}
 
 COPY /divaindexmessenger*.jar /indexing/divaindexmessenger.jar
 #COPY /activemq.jar /indexing/activemq.jar
